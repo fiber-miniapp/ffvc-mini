@@ -1,0 +1,24 @@
+#
+# FX10, K
+#
+
+CXX         = mpiFCCpx
+CXXFLAGS    = -Kfast,ocl,preex,simd=2,uxsimd,array_private,parallel,openmp,optmsg=2
+F90         = mpifrtpx
+F90FLAGS    = -Cpp -Kfast,ocl,preex,simd=2,uxsimd,array_private,auto,parallel,openmp -D_STATIC
+LDFLAGS     = --linkfortran
+LIBS        =
+
+## timing
+CXXFLAGS   += -DPROF_MAPROF
+
+## timing (fapp on K/FX10)
+#CXXFLAGS   += -DPROF_FAPP
+
+## diagonostic
+#CXXFLAGS   += -Nsrc
+#F90FLAGS   += -Qt
+
+## iff double
+#CXXFLAGS   += -D_REAL_IS_DOUBLE_
+#F90FLAGS   += -CcdRR8

@@ -1,0 +1,11 @@
+*.o
+*.lo
+*.la
+*.log
+*.i90
+
+test/history_base.txt
+test/log
+test/maprof_output.yaml
+
+bin/ffvc_mini

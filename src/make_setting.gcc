@@ -1,0 +1,21 @@
+#
+# GCC
+#
+
+CXX         = mpicxx
+CXXFLAGS    = -O3 -fopenmp -DMPICH_IGNORE_CXX_SEEK
+F90         = mpif90
+F90FLAGS    = -O3 -fopenmp -cpp -D_STATIC
+LDFLAGS     =
+LIBS        = -lgfortran
+
+## timing
+CXXFLAGS   += -DPROF_MAPROF
+
+## diagonostic
+#CXXFLAGS   +=
+#F90FLAGS   +=
+
+## iff double
+#CXXFLAGS   += -D_REAL_IS_DOUBLE_
+#F90FLAGS   += -fdefault-real-8 -fdefault-double-8

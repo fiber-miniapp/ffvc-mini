@@ -1,0 +1,33 @@
+/*
+ * CPMlib - Cartesian Partition Manager Library
+ *
+ * Copyright (C) 2012 All rights reserved.
+ *
+ * Institute of Industrial Science, The University of Tokyo.
+ *
+ */
+
+ソフトウェア概要
+  CPMライブラリは、非定常物理シミュレーションプログラムの効率的な開発支援を
+  目的としたクラスライブラリで、カーテシアンにおける領域分割処理と、各種並列
+  通信機能を提供します。
+
+開発、動作環境
+ 以下の環境で動作確認を行っています。
+
+  ハードウェア：Intel64互換CPUのPC
+
+  OS          ：Linux kernel 2.6x
+
+  コンパイラ  ：Intel C++ Compile
+
+
+Note:
+
+  AUTHORS;  著者のシグネチャ
+  ChangeLog;リリース毎の変更点
+  COPYING;  コピーライト
+  INSTALL;  インストール方法の説明
+  NEWS;     リリースノート
+  README;   このドキュメント
+

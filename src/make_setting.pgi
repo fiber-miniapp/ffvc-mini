@@ -1,0 +1,24 @@
+#
+# PGI
+#
+
+CC          = mpicc
+CFLAGS      = -O3
+CXX         = mpicxx
+CXXFLAGS    = -O3 -DMPICH_IGNORE_CXX_SEEK -mp=nonuma
+F90         = mpif90
+F90FLAGS    = -O3 -Mpreprocess -D_STATIC  -mp=nonuma
+LDFLAGS     = -lpthread -lmpi_f90 -lmpi_f77 -lpgf90 -lpgf90_rpm1 -lpgf902 -lpgf90rtl -lpgftnrtl
+LIBS        = 
+
+## timing
+CXXFLAGS   += -DPROF_MAPROF
+
+## diagonostic
+#CXXFLAGS   +=
+#F90FLAGS   +=
+
+## iff double
+#CXXFLAGS   += -D_REAL_IS_DOUBLE_
+#F90FLAGS   += -r8
+

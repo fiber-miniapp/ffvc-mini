@@ -1,0 +1,21 @@
+#
+# INTEL
+#
+
+CXX         = mpicxx
+CXXFLAGS    = -O3 -xHost -openmp -DMPICH_IGNORE_CXX_SEEK
+F90         = mpif90
+F90FLAGS    = -O3 -xHost -openmp -fpp -D_STATIC -Warn unused
+LDFLAGS     =
+LIBS        = -lifport -lifcore
+
+## timing
+CXXFLAGS   += -DPROF_MAPROF
+
+## diagonostic
+#CXXFLAGS   += -par-report=3 -vec-report=2
+#F90FLAGS   += -par-report=3 -vec-report=2
+
+## iff double
+#CXXFLAGS   += -D_REAL_IS_DOUBLE_
+#F90FLAGS   += -r8

@@ -1,0 +1,3 @@
+[submodule "src/FFV/ma_prof"]
+	path = src/FFV/ma_prof
+	url = git@github.com:fiber-miniapp/ma_prof.git

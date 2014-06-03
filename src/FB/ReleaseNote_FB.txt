@@ -1,0 +1,41 @@
+Release Note
+
+	FFV : Frontflow / violet Cartesian
+	
+	2012　 Copyright (c) Institute of Industrial Scienece. All rights reserved.
+  The University of Tokyo, Japan. 
+
+  @author kero
+
+#######################################
+
+Ver 1.0.2    1 Oct. 2012
+  - ファイル出力のディレクトリ対応
+
+Ver 1.0.1   30 Sep. 2012
+  - 反復法のプロセス変更
+  - c_mkdir()追加
+  - コピー，初期化関数のsize_tチェック
+  - 温度パラメータの記述変更
+  - LocalBoundaryの記述形式を変更
+  - Polylib-2.1対応
+  
+Ver 0.9.6   25 Aug. 2012
+  - CPMlib-1.0.6対応
+  - REAL_TYPEの定義をFB_Define.hへ移す
+  - domain.tpにlength_of_unitパラメータを導入
+  - dfi対応
+  - Parallel_Input/Outputパラメータを固定(IO_Distribute)へ変更
+  
+Ver 0.9.3  30 July 2012
+  - plylib-2.1_Dev_b対応
+  - PLOT3Dフォーマットテスト導入
+  - 全メソッドTextParsar対応
+  
+Ver 0.9.0  11 July 2012
+  - Operator追加
+  - hostnameを取得
+  - Iteration/Synchronizationに "sync/async" を追加
+
+Ver 0.8.0  30 June 2012
+  - CPM Library対応
