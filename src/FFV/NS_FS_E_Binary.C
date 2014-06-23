@@ -27,7 +27,6 @@ void FFV::NS_FS_E_Binary()
   double flop;                         /// 浮動小数演算数
   double rhs_nrm = 0.0;                /// 反復解法での定数項ベクトルのL2ノルム
   double res_init = 0.0;               /// 反復解法での初期残差ベクトルのL2ノルム
-  double comm_size;                    /// 通信面1面あたりの通信量
   double convergence=0.0;              /// 定常収束モニター量
   
   REAL_TYPE dt = deltaT;               /// 時間積分幅
@@ -40,8 +39,6 @@ void FFV::NS_FS_E_Binary()
   REAL_TYPE zero = 0.0;                /// 定数
   int wall_prof = 0;                   /// 壁面条件（noslip）
   int cnv_scheme = CnvScheme;          /// 対流項スキーム
-  
-  comm_size = count_comm_size(size, 1);
   
   int v_mode=0;
   

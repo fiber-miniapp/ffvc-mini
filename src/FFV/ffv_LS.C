@@ -73,9 +73,6 @@ int FFV::SOR_2_SMA(ItrCtl* IC, REAL_TYPE* x, REAL_TYPE* b, const double rhs_nrm,
       TIME_START(tm_POI_COMM);
       if ( numProc > 1 )
       {
-        /// 通信面1面あたりの通信量
-        double comm_size = count_comm_size(size, guide);
-        
         if (IC->get_SyncMode() == comm_sync )
         {
           if ( paraMngr->BndCommS3D(x, size[0], size[1], size[2], guide, 1) != CPM_SUCCESS ) Exit(0); // 1 layer communication
