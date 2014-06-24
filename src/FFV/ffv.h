@@ -213,15 +213,6 @@ private:
    */
   void setV00(double m_time);
   
-  
-  /**
-   * @brief 全ノードについて，ローカルノード1面・一層あたりの通信量の和を返す
-   * @retval 通信量(Byte)
-   * @param [in] sz    配列サイズ
-   * @param [in] guide ガイドセル
-   */
-  double count_comm_size(const int sz[3], const int guide);
-  
    
   /**
    * @brief 制御パラメータ，物理パラメータの表示

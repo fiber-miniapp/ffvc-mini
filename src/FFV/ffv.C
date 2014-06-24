@@ -60,47 +60,6 @@ FFV::~FFV()
 
 
 // #################################################################
-// 全ノードについて，ローカルノード1面・一層あたりの通信量の和を返す
-double FFV::count_comm_size(const int sz[3], const int guide)
-{
-  double c = 0.0;
-  
-  // 内部面のみをカウントする
-  for (int n=0; n<6; n++) 
-  {
-    if ( nID[n] >= 0 ) {
-      
-      switch (n) 
-      {
-        case X_MINUS:
-        case X_PLUS:
-          c += (double)(sz[1]*sz[2]);
-          break;
-          
-        case Y_MINUS:
-        case Y_PLUS:
-          c += (double)(sz[0]*sz[2]);
-          break;
-          
-        case Z_MINUS:
-        case Z_PLUS:
-          c += (double)(sz[0]*sz[1]);
-          break;
-      }
-    }
-  }
-  
-  if ( numProc > 1 )
-  {
-    double tmp = c;
-    if ( paraMngr->Allreduce(&tmp, &c, 1, MPI_SUM) != CPM_SUCCESS ) Exit(0);
-  }
-  
-  return c * sizeof(double); // Byte
-}
-
-
-// #################################################################
 // タイムステップループ
 int FFV::MainLoop()
 {

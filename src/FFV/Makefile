@@ -11,7 +11,7 @@
 ###################################################################
 
 FFVC_VERSION = 0.9.2
-FFVC_MINI_VERSION = 1.0.0
+FFVC_MINI_VERSION = 1.0.1
 
 #MAKE_SETTING ?= ../make_setting
 

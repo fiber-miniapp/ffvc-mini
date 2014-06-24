@@ -1,8 +1,8 @@
 FFVC-MINI
 =========
 
-* version: 1.0.0 (based on FFVC 0.9.2)
-* date: 2014/06/03
+* version: 1.0.1 (based on FFVC 0.9.2)
+* date: 2014/06/24
 * contact: miniapp@riken.jp
 
 
